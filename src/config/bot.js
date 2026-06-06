@@ -12,7 +12,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "online",
+    status: "idle",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -25,9 +25,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "Dev",
         // Activity type number (0 = Playing).
-        type: 0, 
+        type: 3, 
       },
     ],
   },
@@ -56,9 +56,9 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "What is your name?", required: false },
+      { question: "How old are you?", required: false },
+      { question: "Why do you want to join?", required: false },
     ],
 
     // Embed colors by application status.
@@ -164,17 +164,17 @@ export const botConfig = {
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 150,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 1000000,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 250,
 
     // Work command random payout range.
-    workMin: 10,
-    workMax: 100,
+    workMin: 5,
+    workMax: 25,
 
     // Beg command random payout range.
     begMin: 5,
@@ -185,7 +185,7 @@ export const botConfig = {
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
-    robFailJailTime: 3600000, 
+    robFailJailTime: 600000, 
   },
 
   // =========================
@@ -255,7 +255,7 @@ export const botConfig = {
 
     // Allowed winner count range.
     minimumWinners: 1,
-    maximumWinners: 10,
+    maximumWinners: 100,
 
     // Allowed giveaway duration range in milliseconds.
     // 300000 = 5 minutes.
